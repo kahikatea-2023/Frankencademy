@@ -54,14 +54,16 @@ function CharacterBuilder() {
   }
   return (
     <>
-      <h2>Build a Dev Academy Frankenstein</h2>
-      {/* {bodypartsArr.map(bodypart => <BodyPart bodypart={"head"}/>)} */}
-      <BodyPart bodyPart={'torso'} data={torsoArr} index={torsoIndex} />
-      <Selector handleClick={handleClick} bodyPart={'torso'} />
-      <BodyPart bodyPart={'head'} data={headArr} index={headIndex} />
-      <Selector handleClick={handleClick} bodyPart={'head'} />
-      <BodyPart bodyPart={'leg'} data={legArr} index={legIndex} />
-      <Selector handleClick={handleClick} bodyPart={'leg'} />
+      <div className="builder">
+        <h2>Build a Dev Academy Frankenstein</h2>
+        {/* {bodypartsArr.map(bodypart => <BodyPart bodypart={"head"}/>)} */}
+        <BodyPart bodyPart={'torso'} data={torsoArr} index={torsoIndex} />
+        <Selector handleClick={handleClick} bodyPart={'torso'} />
+        <BodyPart bodyPart={'head'} data={headArr} index={headIndex} />
+        <Selector handleClick={handleClick} bodyPart={'head'} />
+        <BodyPart bodyPart={'leg'} data={legArr} index={legIndex} />
+        <Selector handleClick={handleClick} bodyPart={'leg'} />
+      </div>
     </>
   )
 }
