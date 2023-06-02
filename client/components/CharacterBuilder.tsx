@@ -72,12 +72,12 @@ function CharacterBuilder() {
           </div>
         </div>
 
-        <div className="button">
+        <div className="buttonContainer">
           <Selector handleClick={handleClick} bodyPart={'head'} />
           <Selector handleClick={handleClick} bodyPart={'torso'} />
           <Selector handleClick={handleClick} bodyPart={'leg'} />
         </div>
-        
+
       </div>
     </>
   )
