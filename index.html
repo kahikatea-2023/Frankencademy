@@ -10,8 +10,18 @@
     <link rel="stylesheet" href="./client/main.css" />
   </head>
   <body>
+    
+    <audio id="audio" src="client/audio/mk-theme.mp3" preload="auto"> 
     <div id="app"></div>
 
     <script src="./client/index.tsx" type="module"></script>
+    <script>
+      const sample = document.getElementById('audio')
+      console.log(sample)
+
+      if (sample !== null) {
+        sample.play()
+      }
+    </script>
   </body>
 </html>
