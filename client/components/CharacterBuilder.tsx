@@ -82,6 +82,7 @@ function CharacterBuilder() {
           <Selector handleClick={handleClick} bodyPart={'leg'} />
         </div>
       </div>
+      
     </>
   )
 }
