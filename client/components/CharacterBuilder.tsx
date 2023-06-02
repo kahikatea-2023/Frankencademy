@@ -6,13 +6,10 @@ import { log } from 'console'
 
 function CharacterBuilder() {
   // const torsoArr = ['andrew', 'robin', 'jane']
-  const torsoArr = data.filter(item => item.bodyPart === "Torso")
-  
-  
-  const headArr = data.filter(item => item.bodyPart === "Head")
-  const legArr = data.filter(item => item.bodyPart === "Legs")
+  const torsoArr = data.filter((item) => item.bodyPart === 'Torso')
 
-    
+  const headArr = data.filter((item) => item.bodyPart === 'Head')
+  const legArr = data.filter((item) => item.bodyPart === 'Legs')
 
   const [torsoIndex, setTorsoIndex] = useState(0)
   const [headIndex, setHeadIndex] = useState(0)
@@ -76,12 +73,11 @@ function CharacterBuilder() {
         </div>
 
         <div className="button">
-          <Selector handleClick={handleClick} bodyPart={'torso'} />
-
           <Selector handleClick={handleClick} bodyPart={'head'} />
-
+          <Selector handleClick={handleClick} bodyPart={'torso'} />
           <Selector handleClick={handleClick} bodyPart={'leg'} />
         </div>
+        
       </div>
     </>
   )

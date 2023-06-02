@@ -11,28 +11,43 @@ body {
 
 .bodyContainer {
   width: 75%;
+  
   background-color: rgb(218, 23, 23);
-  height: auto;
+  max-height: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.head {
-  background-color: blue;
-  height: 15px;
-  width: ;
-}
 
+.head {
+
+  height: 20%;
+  margin-bottom: -2%;
+}
 .torso {
-  background-color: purple;
+
   height: 40%;
 }
 
 .legs {
-  background-color: pink;
+margin-top: -5 %;
   height: 45%;
 }
+
+.HeadImg {
+  max-height: 170px;
+}
+
+.TorsoImg {
+  max-height: 400px;
+}
+
+.LegsImg {
+  max-height: 400px;
+}
+
+
 
 .button {
   width: 25%;
@@ -41,3 +56,7 @@ body {
   background-color: black;
   align-items: center;
 }
+
+/* img {
+  max-height: 50px;
+} */
