@@ -11,10 +11,9 @@
   </head>
   <body>
     
-    <audio id="audio" src="client/audio/mk-theme.mp3" preload="auto"> 
     <div id="app"></div>
+    <audio id="audio" src="client/audio/mk-theme.mp3" preload="auto"> 
     
-    <script src="./client/index.tsx" type="module"></script>
     <script>
       const sample = document.getElementById('audio')
       console.log(sample)
@@ -23,5 +22,6 @@
         sample.play()
       }
     </script>
+    <script src="./client/index.tsx" type="module"></script>
   </body>
 </html>
