@@ -5,9 +5,9 @@ import data from '../data/data'
 import { log } from 'console'
 
 function CharacterBuilder() {
-  
-
+  const bodyPartArr = ['Torso', 'Head', 'Legs']
   const torsoArr = data.filter((item) => item.bodyPart === 'Torso')
+
   const headArr = data.filter((item) => item.bodyPart === 'Head')
   const legArr = data.filter((item) => item.bodyPart === 'Legs')
 
@@ -16,11 +16,13 @@ function CharacterBuilder() {
   const [legIndex, setLegIndex] = useState(0)
 
   function handleClick(index: number, arraySelector: string) {
-    const newIndex = torsoIndex
+    console.log(index, arraySelector)
+
     if (arraySelector === 'torso') {
-      console.log('Calling for Torso')
+      const newIndex = torsoIndex
+      // console.log('Calling for Torso')
       if (torsoIndex === torsoArr.length - 1 && index === 1) {
-        console.log(`Changing to 0 index`)
+        // console.log(`Changing to 0 index`)
 
         setTorsoIndex(0)
       } else if (torsoIndex === 0 && index === -1) {
@@ -29,9 +31,12 @@ function CharacterBuilder() {
         setTorsoIndex(newIndex + index)
       }
     } else if (arraySelector === 'head') {
-      console.log('Calling for Head')
+      const newIndex = headIndex
+      console.log(headIndex)
+
+      // console.log('Calling for Head')
       if (headIndex === headArr.length - 1 && index === 1) {
-        console.log(`Changing to 0 index`)
+        // console.log(`Changing to 0 index`)
 
         setHeadIndex(0)
       } else if (headIndex === 0 && index === -1) {
@@ -40,9 +45,10 @@ function CharacterBuilder() {
         setHeadIndex(newIndex + index)
       }
     } else {
-      console.log('Calling for Legs')
+      // console.log('Calling for Legs')
+      const newIndex = legIndex
       if (legIndex === legArr.length - 1 && index === 1) {
-        console.log(`Changing to 0 index`)
+        // console.log(`Changing to 0 index`)
 
         setLegIndex(0)
       } else if (legIndex === 0 && index === -1) {
@@ -54,16 +60,29 @@ function CharacterBuilder() {
   }
   return (
     <>
+      {/* <h2>Build a Dev Academy Frankenstein</h2> */}
       <div className="builder">
-        <h2>Build a Dev Academy Frankenstein</h2>
+        <div className="space"></div>
         {/* {bodypartsArr.map(bodypart => <BodyPart bodypart={"head"}/>)} */}
-        <BodyPart bodyPart={'torso'} data={torsoArr} index={torsoIndex} />
-        <Selector handleClick={handleClick} bodyPart={'torso'} />
-        <BodyPart bodyPart={'head'} data={headArr} index={headIndex} />
-        <Selector handleClick={handleClick} bodyPart={'head'} />
-        <BodyPart bodyPart={'leg'} data={legArr} index={legIndex} />
-        <Selector handleClick={handleClick} bodyPart={'leg'} />
+        <div className="bodyContainer">
+          <div className="head">
+            <BodyPart bodyPart={'head'} data={headArr} index={headIndex} />
+          </div>
+          <div className="torso">
+            <BodyPart bodyPart={'torso'} data={torsoArr} index={torsoIndex} />
+          </div>
+          <div className="legs">
+            <BodyPart bodyPart={'leg'} data={legArr} index={legIndex} />
+          </div>
+        </div>
+
+        <div className="buttonContainer">
+          <Selector handleClick={handleClick} bodyPart={'head'} />
+          <Selector handleClick={handleClick} bodyPart={'torso'} />
+          <Selector handleClick={handleClick} bodyPart={'leg'} />
+        </div>
       </div>
+      
     </>
   )
 }

@@ -5,7 +5,7 @@ interface Props {
 function Selector(props: Props) {
   return (
     <div className="selector">
-      <p>I&apos;m the {props.bodyPart} selector</p>
+      <p className="buttonP">I&apos;m the {props.bodyPart} selector</p>
       <button onClick={() => props.handleClick(-1, props.bodyPart)}>
         Left
       </button>
