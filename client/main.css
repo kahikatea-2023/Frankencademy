@@ -10,12 +10,12 @@ body {
 
 .title {
   font-family: 'Arial', sans-serif;
-  font-size: 80px;
-  color: #333;
-  text-align: center;
+  font-size: 70px;
+  color: #f57e22;
+  
   text-transform: uppercase;
   letter-spacing: 5px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .builder {
@@ -23,8 +23,11 @@ body {
   justify-content: space-around;
 }
 
+.space {
+  width: 20%;
+}
 .bodyContainer {
-  width: 75%;
+  width: 50%;
   
   
   max-height: 1000px;
@@ -45,7 +48,7 @@ body {
 }
 
 .legs {
-margin-top: -5 %;
+margin-top: -5%;
   height: 45%;
 }
 
@@ -64,7 +67,7 @@ margin-top: -5 %;
 
 
 .buttonContainer{
-  width: 25%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   
@@ -79,12 +82,14 @@ margin-top: -5 %;
 
 button {
   background-color: #f5c299;
-  font-size: 25px;
+  font-size: 35px;
   border-radius: 20%;
   color: black;
 }
 
 .buttonP {
-  font-size: 25px;
+  font-size: 35px;
+  color: #f57e22;
+  font-weight: bold;
   
 }
