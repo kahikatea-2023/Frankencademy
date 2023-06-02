@@ -1,14 +1,13 @@
-import CharacterBuilder from "./CharacterBuilder"
+import CharacterBuilder from './CharacterBuilder'
 
 function App() {
   return (
     <div>
-      <h1 className="title">Frankencademy</h1>
+      <h2 className="title">Frankencademy</h2>
       {/* <p>Build-a-coder</p> */}
       <CharacterBuilder />
     </div>
   )
 }
-
 
 export default App
