@@ -88,15 +88,13 @@ body {
 }
 
 .fire {
-  font-size: 24px;
+  font-size: 5vh;
   filter: blur(0.02em);
-  -webkit-filter: blur(0.02em);
-  
+  -webkit-filter: blur(0.02em);  
   position: static;
-  width: 4em;
-  height: 40vh;
-  z-index: 99;
-
+  width: 15em;
+  height: 0vh;
+  z-index: -1;
 }
 
 .particle {
