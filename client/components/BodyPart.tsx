@@ -1,14 +1,22 @@
+import {Data} from '../data/data'
+ 
 interface Props {
   bodyPart: string
-  data: string[]
+  data: Data[]
   index: number
 }
 
 function BodyPart(props: Props) {
+ 
   return (
+    <>
+    {console.log(`${props.data[props.index].path}`)}
+    
     <div className="bodyPart">
-      <p>I&apos;m a {props.data[props.index]} body part</p>
+      <img src={`client/${props.data[props.index].path}`} alt={`${props.data[props.index].person} ${props.data[props.index].bodyPart}`} />
+      <p>{props.data[props.index].person} {props.data[props.index].bodyPart}</p>
     </div>
+    </>
   )
 }
 

@@ -1,12 +1,18 @@
 import { useState } from 'react'
 import BodyPart from './BodyPart'
 import Selector from './Selector'
-// import data from './data'
+import data from '../data/data'
+import { log } from 'console'
 
 function CharacterBuilder() {
-  const torsoArr = ['andrew', 'robin', 'jane']
-  const headArr = ['andrew', 'robin', 'jane']
-  const legArr = ['andrew', 'robin', 'jane']
+  // const torsoArr = ['andrew', 'robin', 'jane']
+  const torsoArr = data.filter(item => item.bodyPart === "Torso")
+  
+  
+  const headArr = data.filter(item => item.bodyPart === "Head")
+  const legArr = data.filter(item => item.bodyPart === "Legs")
+
+    
 
   const [torsoIndex, setTorsoIndex] = useState(0)
   const [headIndex, setHeadIndex] = useState(0)
