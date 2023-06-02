@@ -3,8 +3,8 @@ import CharacterBuilder from "./CharacterBuilder"
 function App() {
   return (
     <div>
-      <h1>Frankencademy</h1>
-      <p>Build-a-bear but Dev Academy Fighters</p>
+      <h1 className="title">Frankencademy</h1>
+      {/* <p>Build-a-coder</p> */}
       <CharacterBuilder />
     </div>
   )
