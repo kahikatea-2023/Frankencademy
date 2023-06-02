@@ -87,6 +87,7 @@ function CharacterBuilder() {
         </div>
 
       </div>
+      
     </>
   )
 }
