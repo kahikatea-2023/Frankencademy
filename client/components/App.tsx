@@ -1,12 +1,14 @@
 import CharacterBuilder from './CharacterBuilder'
+import Audio from './Audio'
 
 function App() {
   return (
     <>
-    <div>
-      <h2 className="title">Frankencademy</h2>
-      {/* <p>Build-a-coder</p> */}
-      <CharacterBuilder />
+      <Audio />
+      <div>
+        <h2 className="title">Frankencademy</h2>
+        {/* <p>Build-a-coder</p> */}
+        <CharacterBuilder />
       <div className="fireContainer">
       <div className="fire">
           <div className="particle"></div>
@@ -1081,8 +1083,9 @@ function App() {
           <div className="particle"></div> 
         </div>
       </div>
-    </div>
+      </div>
     </>
+
   )
 }
 
